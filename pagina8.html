@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Destacar todo o código Python
+            hljs.highlightAll();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("botao-conteudos").addEventListener("click", function() {
+                toggleVisibility("lista-conteudos");
+            });
+
+            document.getElementById("botao-exercicios").addEventListener("click", function() {
+                toggleVisibility("lista-exercicios");
+            });
+
+            function toggleVisibility(id) {
+                var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        });
+    </script>
+    <title>Pycode</title>
+</head>
+<body>
+    <div id="container">
+        <div id="navegacao">
+            <div id="titulo-nav"></div>
+
+            <div id="container-nav">
+                <div class="botoes-navegacao"><a href="index.html", id="titulo">Início</a></div>
+                <div class="botoes-navegacao" id="botao-conteudos">Conteúdos</div>
+                <div id="lista-conteudos" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="pagina1.html", id="subtitulo" >Algoritmo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina2.html", id="subtitulo">Variáveis</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina3.html", id="subtitulo">Operadores</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina4.html", id="subtitulo">Operadores lógicos</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina5.html", id="subtitulo">Controle de fluxo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina6.html", id="subtitulo">Entrada e saída</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina7.html", id="subtitulo">Laços de repetição</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina8.html", id="subtitulo">Funções</a></div>
+                </div>
+                <div class="botoes-navegacao" id="botao-exercicios">Exercícios</div>
+                <div id="lista-exercicios" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 01</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 02</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 03</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 04</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 05</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 06</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 07</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 08</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="conteudo-visual">
+            <div id="cabecalho">
+                <h1 style="text-align: center;">Funções</h1>
+            </div>
+            <div id="conteudo">
+                <p>As funções são blocos de código que realizam uma tarefa específica e podem ser reutilizados em diferentes partes de um programa. Elas permitem organizar e estruturar o código de forma modular, facilitando a manutenção, reutilização e compreensão do código. 
+                    <br><br>
+                    Vamos supor que você queira fazer um código que calcule a soma de dois valores. Com seus conhecimentos atuais, você provavelmente faria algo semelhante a isso: </p>
+                    <pre><code class="python">
+                        Num1 = int(input("Digite um número inteiro: ")) 
+                        Num2 = int(input("Digite outro número inteiro: ")) 
+                        
+                        Soma = Num1 + Num2 
+
+                        print(f"A soma dos números digitados é: {Soma}") 
+                    </code></pre>
+                    <p>E a princípio esse código é eficaz. Mas quando trabalhamos com grandes quantidades de partes do código repetidas vezes, é ineficaz reescrever elas ao longo do código, e é pra isso que existem as funções. Com elas, é possível reutilizar trechos do seu código em outras partes dele, sem precisar reescrevê-lo. 
+                        <br><br></p>
+                    <h1 style="text-align: center;">Estrutura de uma função</h1>
+                    <p>Para definir uma função em Python, usamos a palavra-chave <code>def</code>, seguida pelo nome da função e, opcionalmente, parâmetros entre parênteses. A estrutura geral seria algo similar a: </p>
+                    <pre><code class="python">
+                        def nome_da_funcao (parâmetros):
+                            #codigo aqui
+                    </code></pre>
+                    <h1 style="text-align: center;">Parâmetros de uma função</h1>
+                    <p>Os parâmetros de uma função são utilizados quando essa função precisa receber valores de outras partes do código para tratar desses valores dentro da função. Por exemplo, utilizando o código escrito anteriormente, poderíamos fazer uma função assim: </p>
+                    <pre><code class="python">
+                        def soma(a,b):
+                            return a + b
+                    </code></pre>
+                    <p>Nessa função, os parâmetros são as variáveis a e b, que serão utilizados dentro da função para realizar uma operação matemática. E então, a função vai retornar a soma dos valores a e b. (return a + b) 
+                        <br><br>
+                        Escrevendo o código inteiro, ficaria assim: </p>
+                    <pre><code class="python">
+                        def soma (a, b): 
+                            return a + b 
+                            
+                        Num1 = int(input("Digite um número inteiro: ")) 
+                        Num2 = int(input("Digite outro número inteiro: ")) 
+                        
+                        print(f"A soma dos valores é {soma(Num1, Num2)}") 
+                    </code></pre>
+                    <p>Para chamar a função, nós escrevemos seu nome e dentro dos parênteses colocamos os parâmetros, se houver. Note que nós atribuímos os valores de <code>Num1</code> e <code>Num2</code> aos valores de <code>a</code> e <code>b</code>, para a função realizar os cálculos. 
+                        <br><br>
+                        Existe uma ampla quantidade de assuntos que envolvem as funções, e o que foi mencionado acima é só o básico. Por isso, continue pesquisando para aprender cada vez mais como e quando utilizar as funções. 
+                        <br><br><br>
+                        Se você chegou até aqui, parabéns. Boa parte das pessoas desistem ao ver a quantidade de assuntos, a quantidade de textos, de informações... Mas todo esse esforço com certeza gerará uma recompensa para você. O mercado de programação e tecnologia no geral está evoluindo dia após dia, e precisará de profissionais cada vez mais competentes para realizar as atividades do dia a dia e resolver os problemas que aparecerão conforme os anos passam. Boa sorte na sua carreira, e me deseje boa sorte também!  
+                        <br><br>
+                        Realize o exercício de número 8 para testar seus conhecimentos. </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Destacar todo o código Python
+            hljs.highlightAll();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("botao-conteudos").addEventListener("click", function() {
+                toggleVisibility("lista-conteudos");
+            });
+
+            document.getElementById("botao-exercicios").addEventListener("click", function() {
+                toggleVisibility("lista-exercicios");
+            });
+
+            function toggleVisibility(id) {
+                var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        });
+    </script>
+    <title>Pycode</title>
+</head>
+<body>
+    <div id="container">
+        <div id="navegacao">
+            <div id="titulo-nav"></div>
+
+            <div id="container-nav">
+                <div class="botoes-navegacao"><a href="index.html", id="titulo">Início</a></div>
+                <div class="botoes-navegacao" id="botao-conteudos">Conteúdos</div>
+                <div id="lista-conteudos" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="pagina1.html", id="subtitulo" >Algoritmo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina2.html", id="subtitulo">Variáveis</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina3.html", id="subtitulo">Operadores</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina4.html", id="subtitulo">Operadores lógicos</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina5.html", id="subtitulo">Controle de fluxo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina6.html", id="subtitulo">Entrada e saída</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina7.html", id="subtitulo">Laços de repetição</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina8.html", id="subtitulo">Funções</a></div>
+                </div>
+                <div class="botoes-navegacao" id="botao-exercicios">Exercícios</div>
+                <div id="lista-exercicios" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 01</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 02</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 03</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 04</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 05</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 06</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 07</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 08</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="conteudo-visual">
+            <div id="cabecalho">
+                <h1 style="text-align: center;">Controle de fluxo</h1>
+            </div>
+            <div id="conteudo">
+                <p>No nosso cotidiano, dependemos muito de condições para realizar determinadas tarefas. Por exemplo, digamos que eu esteja no mercado e queira comprar uma bolinha de queijo, se eu tiver dinheiro suficiente na carteira, então eu vou comprar, caso contrário, eu não vou comprar. 
+                    <br><br>
+                    Perceba que, para eu realizar a tarefa “comprar bolinha de queijo”, eu dependo da condição “dinheiro suficiente”, e há duas decisões aqui: uma para caso eu tenha dinheiro suficiente para comprar, e outra para caso eu não tenha dinheiro suficiente. 
+                    <br><br>
+                    No mundo da programação haverá momentos em que iremos precisar verificar uma condição antes de realizar uma tarefa, e isso é chamado de estrutura de controle condicional, ou controle de fluxo. 
+                    <br><br>
+                    Por exemplo, digamos que nós precisamos de um código para verificar se uma pessoa é maior de idade. Caso ela seja, a entrada dela está liberada, mas caso não seja, ela não poderá entrar. Nós poderíamos escrever esse código assim: </p>
+                    <pre><code class="python">
+                        idade = 20
+
+                        if idade >= 18:
+                            print("Entrada permitida")
+                        else:
+                            print("Entrada não permitida")
+                    </code></pre>
+                    <p>Vamos analisar esse código por partes. Na linha 1, a variavel <code>idade</code> é criada seu valor é definido como 20 (caso não entenda, veja o conteúdo de Variáveis).  
+                        <br><br>
+                        Já na linha 3, temos uma verificação que se inicia com o termo <code>if</code>, que vem do inglês e significa <code>se</code>.  
+                        <br><br>
+                        Em seguida, há uma condição escrita como <code>idade >= 18</code>, nesse trecho estamos dizendo ao computador que ele deve verificar se a variável <code>idade</code> possui um valor maior ou igual a 18.  
+                        <br><br>
+                        Prosseguindo, temos 2 pontos, que indicam que o código abaixo só será executado se a nossa condição estabelecida for verdadeira. E se for, o computador irá imprimir a mensagem “<code>Entrada permitida</code>”. 
+                        <br><br>
+                        A seguir nós temos o termo <code>else</code>, que do inglês significa <code>se não</code>. Ele diz ao computador o que fazer caso a nossa condição <code>idade >= 18</code> não seja verdadeira. Caso não seja, ele irá imprimir na tela a mensagem “<code>Entrada não permitida</code>”. </p>
+                        <h1 style="text-align: center;"><code>Elif</code></h1>
+                        <p>Há também um outro termo na estrutura de condições, o <code>elif</code>. Ele serve como uma segunda condição a ser verificada caso a condição do bloco <code>if</code> não seja satisfeita. Vamos supor que dessa vez estamos verificando se uma pessoa precisa ou não votar. Nosso código seria algo como: </p>
+                        <pre><code class="python">
+                            idade = 20
+
+                            if idade <= 15:
+                                print("Não pode votar")
+                            elif idade >= 16 and idade < 18:
+                                print("Voto opcional")
+                            else:
+                                print("Voto obrigatório")
+                        </code></pre>
+                        <p>Nesse código, se a <code>idade</code> for maior ou igual a 15, o usuário ainda não pode votar. Se for maior ou igual a 16 e menor que 18, o voto é opcional. Mas se não estiver em nenhuma dessas condições citadas, então o voto é obrigatório (estamos desconsiderando a lei que diz que pessoas com mais de 70 anos não precisam votar). 
+                            <br><br>
+                            Perceba que não foi utilizado um <code>elif idade >= 18</code> na última verificação da nossa estrutura, porque não há necessidade, já que se a pessoa não tiver uma idade entre 16 e 18, ela terá uma idade maior que 18.  
+                            <br><br>
+                            Realize o exercício de número 5 na nossa aba de exercícios caso queira testar seus conhecimentos! </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

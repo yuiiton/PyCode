@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Destacar todo o código Python
+            hljs.highlightAll();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("botao-conteudos").addEventListener("click", function() {
+                toggleVisibility("lista-conteudos");
+            });
+
+            document.getElementById("botao-exercicios").addEventListener("click", function() {
+                toggleVisibility("lista-exercicios");
+            });
+
+            function toggleVisibility(id) {
+                var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        });
+    </script>
+    <title>Pycode</title>
+</head>
+<body>
+    <div id="container">
+        <div id="navegacao">
+            <div id="titulo-nav"></div>
+
+            <div id="container-nav">
+                <div class="botoes-navegacao"><a href="index.html", id="titulo">Início</a></div>
+                <div class="botoes-navegacao" id="botao-conteudos">Conteúdos</div>
+                <div id="lista-conteudos" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="pagina1.html", id="subtitulo" >Algoritmo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina2.html", id="subtitulo">Variáveis</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina3.html", id="subtitulo">Operadores</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina4.html", id="subtitulo">Operadores lógicos</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina5.html", id="subtitulo">Controle de fluxo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina6.html", id="subtitulo">Entrada e saída</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina7.html", id="subtitulo">Laços de repetição</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina8.html", id="subtitulo">Funções</a></div>
+                </div>
+                <div class="botoes-navegacao" id="botao-exercicios">Exercícios</div>
+                <div id="lista-exercicios" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 01</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 02</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 03</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 04</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 05</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 06</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 07</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 08</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="conteudo-visual">
+            <div id="cabecalho">
+                <h1 style="text-align: center;">Operadores matemáticos</h1>
+            </div>
+            <div id="conteudo">
+                <p>Os operadores matemáticos são símbolos especiais que são utilizados para realizar operações aritméticas em números nas linguagens de programação. Os principais operadores matemáticos em Python são: </p>
+                <p style="font-size: larger;">1. Adição (+): Usado para somar dois ou mais números. 
+                    <br><br>
+                    Subtração (-): Usado para subtrair um número de outro: 
+                    <br><br>
+                    
+                    Multiplicação (*): Usado para multiplicar dois ou mais números. 
+                    <br><br>
+                    
+                    Divisão (/): Usado para dividir um número pelo outro. 
+                    <br><br>
+                    
+                    Exponenciação (**): Usado para elevar um número à potência de outro. 
+                    <br><br>
+                    </p>
+                    <p>Há muitos outros operadores matemáticos, mas no geral, esses são os principais que você precisa saber agora. Portanto, não esqueça de continuar pesquisando mais a fundo sobre esses conteúdos se sentir necessidade. 
+                        <br><br>
+                        Confira o exercício de número 3 da nossa página de exercícios para ampliar seus conhecimentos! </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

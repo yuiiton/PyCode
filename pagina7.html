@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Destacar todo o código Python
+            hljs.highlightAll();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("botao-conteudos").addEventListener("click", function() {
+                toggleVisibility("lista-conteudos");
+            });
+
+            document.getElementById("botao-exercicios").addEventListener("click", function() {
+                toggleVisibility("lista-exercicios");
+            });
+
+            function toggleVisibility(id) {
+                var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        });
+    </script>
+    <title>Pycode</title>
+</head>
+<body>
+    <div id="container">
+        <div id="navegacao">
+            <div id="titulo-nav"></div>
+
+            <div id="container-nav">
+                <div class="botoes-navegacao"><a href="index.html", id="titulo">Início</a></div>
+                <div class="botoes-navegacao" id="botao-conteudos">Conteúdos</div>
+                <div id="lista-conteudos" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="pagina1.html", id="subtitulo" >Algoritmo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina2.html", id="subtitulo">Variáveis</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina3.html", id="subtitulo">Operadores</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina4.html", id="subtitulo">Operadores lógicos</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina5.html", id="subtitulo">Controle de fluxo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina6.html", id="subtitulo">Entrada e saída</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina7.html", id="subtitulo">Laços de repetição</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina8.html", id="subtitulo">Funções</a></div>
+                </div>
+                <div class="botoes-navegacao" id="botao-exercicios">Exercícios</div>
+                <div id="lista-exercicios" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 01</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 02</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 03</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 04</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 05</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 06</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 07</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 08</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="conteudo-visual">
+            <div id="cabecalho">
+                <h1 style="text-align: center;">Laços de repetição</h1>
+            </div>
+            <div id="conteudo">
+                <p>os laços de repetição, também conhecidos como loops, são estruturas fundamentais que permitem executar um bloco de código repetidamente enquanto uma condição específica for verdadeira ou por um número determinado de vezes. Existem dois tipos principais de loops em Python: o loop ‘for’ e o loop ‘while’. </p>
+                <h1 style="text-align: center;">For</h1>
+                <p>O loop <code>for</code> é usado para iterar sobre uma sequência (como uma lista, tupla, dicionário, conjunto ou string) e executar um bloco de código para cada elemento na sequência. Por exemplo: </p>
+                <pre><code class="python">
+                    Lista = [1,2,3,4,5]
+                    for item in Lista: 
+                    print(item) 
+                </code></pre>
+                <p>Nesse código, o for está se referindo a cada elemento da variável (1,2,3,4,5) Lista pelo nome item, e ele irá fazer uma impressão para cada item dessa lista. O resultado da execução seria: </p>
+                <pre><code class="python">
+                    1
+                    2
+                    3
+                    4
+                    5
+                </code></pre>
+                <p>OBS: O nome ‘item’ é apenas uma forma de se referir aos elementos da variável ‘Lista’. Você poderia no lugar de ‘item’ colocar qualquer outro nome, como por exemplo ‘numero’ (já que essa lista só possui números). Essa decisão fica a seu critério. 
+                    <br><br><br></p>
+                <h1 style="text-align: center;">While</h1>
+                <p>O loop <code>while</code> é usado para repetir um bloco de código enquanto uma condição específica for verdadeira. Por exemplo: </p>
+                <pre><code class="python">
+                    Numero = 0 
+                    
+                    while Numero < 5: 
+                    print("Numero agora é: ", Numero) 
+                    Numero = Numero + 1 
+                </code></pre>
+                <p>Nesse código, enquanto a variável <code>Numero</code> for menor que cinco, ele vai mostrar o valor atual da variável e acrescentar +1 ao seu valor, e quando esse valor ultrapassar 5, o loop será encerrado. 
+                    <br><br><br>
+                    Ambas as estruturas possuem as suas utilidades, e tudo vai depender do contexto em que você está aplicando-as. Por isso, é necessário desenvolver a sua capacidade de interpretar problemas para saber quando será necessário utilizar um loop para resolver um problema. 
+                    <br><br>
+                    Resolva o exercício de número 7 para testar seus conhecimentos!  </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

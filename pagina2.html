@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Destacar todo o código Python
+            hljs.highlightAll();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("botao-conteudos").addEventListener("click", function() {
+                toggleVisibility("lista-conteudos");
+            });
+
+            document.getElementById("botao-exercicios").addEventListener("click", function() {
+                toggleVisibility("lista-exercicios");
+            });
+
+            function toggleVisibility(id) {
+                var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        });
+    </script>
+    <title>Pycode</title>
+</head>
+<body>
+    <div id="container">
+        <div id="navegacao">
+            <div id="titulo-nav"></div>
+
+            <div id="container-nav">
+                <div class="botoes-navegacao"><a href="index.html", id="titulo">Início</a></div>
+                <div class="botoes-navegacao" id="botao-conteudos">Conteúdos</div>
+                <div id="lista-conteudos" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="pagina1.html", id="subtitulo" >Algoritmo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina2.html", id="subtitulo">Variáveis</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina3.html", id="subtitulo">Operadores</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina4.html", id="subtitulo">Operadores lógicos</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina5.html", id="subtitulo">Controle de fluxo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina6.html", id="subtitulo">Entrada e saída</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina7.html", id="subtitulo">Laços de repetição</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina8.html", id="subtitulo">Funções</a></div>
+                </div>
+                <div class="botoes-navegacao" id="botao-exercicios">Exercícios</div>
+                <div id="lista-exercicios" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 01</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 02</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 03</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 04</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 05</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 06</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 07</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 08</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="conteudo-visual">
+            <div id="cabecalho">
+                <h1>Variáveis</h1>
+            </div>
+            <div id="conteudo">
+                <p>Uma variável é um local na memória do computador que é utilizado para armazenar um valor. Esses valores podem ser números, textos, objetos, ou qualquer outro tipo de dado (trabalharemos isso no próximo tópico). As variáveis têm um nome que as identifica e permitem que o programador acesse e manipule o valor armazenado nelas durante a execução do programa.<br><br>Temos por exemplo as seguintes variáveis: </p>
+                <pre><code class="python">
+                    Nome = "Maria"
+                    Idade = 25 
+                    Saldo = 320.15 
+                    Numeros_preferidos = [5,7,9,10] 
+                </code></pre>
+                <p>Para criar o nome da variável, é preciso seguir algumas regras, algumas opcionais e outras obrigatórias, por exemplo: </p>
+                <p style="font-size: larger;">1. O nome da variável deve começar com uma letra (maiúscula ou minúscula). Não é permitido começar com um número ou outro caractere especial. 
+                    <br><br>
+                    2. O nome da variável pode conter apenas letras (maiúsculas ou minúsculas) e números. Outros caracteres, como espaços, pontuação ou símbolos especiais, não são permitidos. 
+                    <br><br>
+                    3. Os nomes das variáveis devem ser curtos o suficiente para serem concisos, mas também devem ser longos o suficiente para serem descritivos. Evite nomes muito curtos, como "x" ou "y", que podem não transmitir informações suficientes sobre o propósito da variável. Da mesma forma, evite nomes muito longos e verbosos que dificultem a leitura do código. 
+                    <br><br>
+                    4. Os nomes das variáveis devem ser descritivos e refletir o propósito ou conteúdo da variável. Isso torna o código mais legível e compreensível para outras pessoas que possam estar lendo ou mantendo o código. </p>
+                    <p>Nota: Eu vou quebrar a regra 3 e 4 nos próximos módulos... mas não façam o mesmo em códigos grandes TwT</p>
+                    <h1 style="text-align: center;">Tipos de dados de variáveis</h1>
+                    <p>Os tipos de dados definem os diferentes tipos de valores que podem ser armazenados em uma variável. Os tipos mais comuns são: </p>
+                    <p style="font-size: large;">Inteiro (int): Representa números inteiros, como 5, -10, 1000, etc. 
+                        <br><br>
+                        Flutuante (float): Representa números de ponto flutuante (decimais), como 3.14, -0.5, 2.718, etc. 
+                        <br><br>
+                        String (str): Representa sequências de caracteres, como "Olá, mundo!", "Python é incrível", etc. 
+                        <br><br>
+                        Booleano (bool): Representa valores lógicos verdadeiro (True) ou falso (False). 
+                        <br><br>
+                        Lista (list): Representa uma coleção ordenada de valores, que podem ser de tipos diferentes. 
+                        <br><br>
+                        Dicionário (dict): Representa uma coleção de pares chave-valor, onde cada valor é acessado por sua chave correspondente. </p>
+                        <br><br>
+                        <p>Por exemplo, a nossa variável <code>Nome</code> possui um valor do tipo String ou str, já que ela armazena uma sequência de caracteres. Lembre-se que, para a linguagem entender uma palavra ou frase como caracteres, é preciso colocar essa palavra/frase dentro de aspas ‘’ ou aspas duplas “”. 
+                            <br><br>
+                            Já a variável <code>Idade</code> armazena um valor do tipo Inteiro ou int. 
+                            <br><br>
+                            A variável <code>Saldo</code> está armazenando um valor do tipo Flutuante ou float. Perceba que para definir as casas decimais nas linguagens de programação, nós utilizamos um ponto antes de escrevê-las. 
+                            <br><br>
+                            E por fim, a variável <code>Numeros_preferidos</code> está armazenando um valor do tipo lista, já que armazena vários números em uma única variável. 
+                            <br><br><br><br>
+                             
+                            Não se preocupe caso não tenha entendido algum desses tipos de dados, você entenderá melhor eles conforme continuar praticando. Outros tipos de dados também serão apresentados futuramente. 
+                            <br><br>
+                            Para ampliar seus conhecimentos, realize o exercício de número 2 na nossa aba de exercícios! </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

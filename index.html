@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("botao-conteudos").addEventListener("click", function() {
+                toggleVisibility("lista-conteudos");
+            });
+
+            document.getElementById("botao-exercicios").addEventListener("click", function() {
+                toggleVisibility("lista-exercicios");
+            });
+
+            function toggleVisibility(id) {
+                var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        });
+    </script>
+    <title>Pycode</title>
+</head>
+<body>
+    <div id="container">
+        <div id="navegacao">
+            <div id="titulo-nav"></div>
+
+            <div id="container-nav">
+                <div class="botoes-navegacao"><a href="index.html", id="titulo">Início</a></div>
+                <div class="botoes-navegacao" id="botao-conteudos">Conteúdos</div>
+                <div id="lista-conteudos" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="pagina1.html", id="subtitulo" >Algoritmo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina2.html", id="subtitulo">Variáveis</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina3.html", id="subtitulo">Operadores</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina4.html", id="subtitulo">Operadores lógicos</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina5.html", id="subtitulo">Controle de fluxo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina6.html", id="subtitulo">Entrada e saída</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina7.html", id="subtitulo">Laços de repetição</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina8.html", id="subtitulo">Funções</a></div>
+                </div>
+                <div class="botoes-navegacao" id="botao-exercicios">Exercícios</div>
+                <div id="lista-exercicios" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 01</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 02</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 03</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 04</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 05</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 06</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 07</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 08</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="conteudo-visual">
+            <div id="cabecalho">
+                    <h1 style="color: whitesmoke; font-weight: normal; font-family: Arial;">Bem-vindo ao Pycode!</h1>
+            </div>
+            <div id="principal">
+                <h1>Sobre o site</h1>
+                <div class="texto">
+                    <p style="opacity: 0.8;">Site projetado por um estudante de programação que possui o sonho de despertar o interesse de outras pessoas nessa área. Com esse objetivo, este site visa fornecer os conhecimentos básicos sobre lógica de programação e Python, a fim de que o usuário, após a leitura dos conteúdos disponibilizados, tenha uma base para iniciar seus estudos na programação de maneira mais profunda.<br>Note que o objetivo deste site não é fornecer conhecimentos avançados sobre os conteúdos aqui listados, e muito menos abranger TODOS os conteúdos que existem na lógica de programação. Caso o usuário tenha seu interesse desperto após a leitura deste site, recomendo que busque outros materiais de estudo, como cursos profissionalizantes, video-aulas e artigos online sobre o assunto.</p>
+                </div>
+                <h1>Como navegar pelo site</h1>
+                <div class="texto">
+                    <p>Ao lado esquerdo está localizado o menu de navegação. Clicando em <em>Conteúdos</em>, uma lista aparecerá com todos os conteúdos disponíveis. Selecione qualquer um deles clicando no seu nome, e bom estudo!</p>
+                    <img src="tuto1.png" alt="Imagem de tutorial">
+                </div>
+                <div class="texto">Caso queira ampliar seus estudos, clique na aba de <em>Exercícios</em> e selecione um deles. Ao término de cada conteúdo, há um exercício sugerido no final do texto.
+                <img src="tuto2.png" alt="Imagem de tutorial">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

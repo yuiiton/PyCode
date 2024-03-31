@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Destacar todo o código Python
+            hljs.highlightAll();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("botao-conteudos").addEventListener("click", function() {
+                toggleVisibility("lista-conteudos");
+            });
+
+            document.getElementById("botao-exercicios").addEventListener("click", function() {
+                toggleVisibility("lista-exercicios");
+            });
+
+            function toggleVisibility(id) {
+                var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        });
+    </script>
+    <title>Pycode</title>
+</head>
+<body>
+    <div id="container">
+        <div id="navegacao">
+            <div id="titulo-nav"></div>
+
+            <div id="container-nav">
+                <div class="botoes-navegacao"><a href="index.html", id="titulo">Início</a></div>
+                <div class="botoes-navegacao" id="botao-conteudos">Conteúdos</div>
+                <div id="lista-conteudos" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="pagina1.html", id="subtitulo" >Algoritmo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina2.html", id="subtitulo">Variáveis</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina3.html", id="subtitulo">Operadores</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina4.html", id="subtitulo">Operadores lógicos</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina5.html", id="subtitulo">Controle de fluxo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina6.html", id="subtitulo">Entrada e saída</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina7.html", id="subtitulo">Laços de repetição</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina8.html", id="subtitulo">Funções</a></div>
+                </div>
+                <div class="botoes-navegacao" id="botao-exercicios">Exercícios</div>
+                <div id="lista-exercicios" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 01</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 02</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 03</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 04</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 05</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 06</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 07</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 08</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="conteudo-visual">
+            <div id="cabecalho">
+                <h1 style="text-align: center;">Operadores lógicos</h1>
+            </div>
+            <div id="conteudo">
+                <h1 style="text-align: center;"><code>And</code></h1>
+                <p>Em nossa vida, muitas vezes precisamos tomar decisões baseadas em alguma lógica determinada. Por exemplo, digamos que eu esteja no mercado e queira comprar uma bolinha de queijo, então eu penso o seguinte: se eu tiver dinheiro suficiente e puder gastar ele, então eu vou comprar.  
+                    <br><br>
+                    Perceba que há uma condição lógica aqui, porque para você comprar, você precisa ter dinheiro e poder gastar esse dinheiro. Se você não tiver o dinheiro, então não vai comprar. E se você tiver o dinheiro, mas não puder gastar, então você também não vai comprar (se você não for impulsivo, claro...). A compra só vai ser realizada se as duas condições lógicas estabelecidas forem verdadeiras. 
+                    <br><br>
+                    Em Python, o operador lógico utilizado na situação em que duas condições precisam ser verdadeiras, é o <code>and</code>. Observe no exemplo a seguir: </p>
+                    <pre><code class="python">
+                        X = 10
+                        Y = 20
+
+                        print(X > 7 and Y > 21)
+                    </code></pre>
+                    <p>Se executarmos esse código, o computador irá imprimir a mensagem “False”, pois a nossa condição é falsa já que X é maior que sete, mas Y não é maior que 21. 
+                        <br><br></p>
+                    <h1 style="text-align: center;"><code>Or</code></h1>
+                    <p>Outro operador lógico é o  <code class="python">or</code>. Com ele, o código pode ser executado se uma das condições estabelecidas forem verdadeiras. Vamos reescrever o nosso código anterior, mas dessa vez utilizando o operador <code>or</code>: </p>
+                    <pre><code class="python">
+                        X = 10
+                        Y = 20
+
+                        print(X > 7 or Y > 21)
+                    </code></pre>
+                    <p>Nesse exemplo, o computador irá imprimir a mensagem “True”, pois apesar de Y não ser maior que 21, X é maior que sete, e com o operador or, basta apenas uma das condições serem verdadeiras para ele ser executado. 
+                        <br><br></p>
+                    <h1 style="text-align: center;"><code>Not</code></h1>
+                    <p>Temos também o operador <code>not</code>, que como o próprio nome indica, ele irá verificar se a condição não é verdadeira. Tomando como exemplo o nosso código anterior: </p>
+                    <pre><code class="python">
+                        X = 10
+
+                        print(not X > 12)
+                    </code></pre> 
+                    <p>Nesse caso, o computador irá imprimir a mensagem “True”, porque ele está verificando se X não é maior que 12, o que é verdadeiro já que X é igual a 10. </p>
+                    <br><br>
+                    <h1 style="text-align: center;">Operadores de comparação</h1>
+                    <p>Os operadores de comparação são comumente utilizados pra verificações de condições na estrutura de fluxo condicional (conteúdo que será trabalhado mais a frente). A seguir estão os principais: </p>
+                    <p style="font-size: large;">1. ‘==’: Ele verifica se um valor é igual a outro, por exemplo: </p>
+                    <pre><code class="python">
+                        X = 10
+                        Y = 10
+
+                        print(X == Y)
+                    </code></pre>
+                    <p>O computador vai retornar o valor “True”, já que ambas as variáveis possuem o mesmo valor. </p>
+                    <br><br>
+                    <p style="font-size: large;">2. ‘>=’ e ‘<=’: Eles verificam se um valor é igual ou maior que o outro, e igual ou menor que o outro, respectivamente. Por exemplo: </p>
+                    <pre><code class="python">
+                        X = 10
+                        Y = 20
+
+                        print(X >= Y)
+                        print(X <= Y)
+                    </code></pre>
+                    <p>O computador irá retornar “False” e “True”, respectivamente, pois na primeira análise o X não é maior ou igual a Y, mas na segunda análise o X é menor que Y. </p>
+                    <br><br>
+                    <p style="font-size: large;">3. ‘!=’: Ele verifica se um valor é diferente do outro. Por exemplo: </p>
+                    <pre><code class="python">
+                        X = 10
+                        Y = 10
+
+                        print(X != Y)
+                    </code></pre>
+                    <p>O computador vai retornar “False”, pois X possui o mesmo valor que Y, logo eles não são diferentes. </p>
+                    <br><br>
+                    <p>Existe uma grande quantidade de operadores lógicos e de comparação, por isso, recomendo que continue pesquisando e praticando para poder entendê-los cada vez mais. 
+                        <br><br>
+                        Resolva o exercício de número 4 para testar seus conhecimentos! </p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Destacar todo o código Python
+            hljs.highlightAll();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("botao-conteudos").addEventListener("click", function() {
+                toggleVisibility("lista-conteudos");
+            });
+
+            document.getElementById("botao-exercicios").addEventListener("click", function() {
+                toggleVisibility("lista-exercicios");
+            });
+
+            function toggleVisibility(id) {
+                var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        });
+    </script>
+    <title>Pycode</title>
+</head>
+<body>
+    <div id="container">
+        <div id="navegacao">
+            <div id="titulo-nav"></div>
+
+            <div id="container-nav">
+                <div class="botoes-navegacao"><a href="index.html", id="titulo">Início</a></div>
+                <div class="botoes-navegacao" id="botao-conteudos">Conteúdos</div>
+                <div id="lista-conteudos" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="pagina1.html", id="subtitulo" >Algoritmo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina2.html", id="subtitulo">Variáveis</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina3.html", id="subtitulo">Operadores</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina4.html", id="subtitulo">Operadores lógicos</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina5.html", id="subtitulo">Controle de fluxo</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina6.html", id="subtitulo">Entrada e saída</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina7.html", id="subtitulo">Laços de repetição</a></div>
+                    <div class="botoes-navegacao" ><a href="pagina8.html", id="subtitulo">Funções</a></div>
+                </div>
+                <div class="botoes-navegacao" id="botao-exercicios">Exercícios</div>
+                <div id="lista-exercicios" style="display: none;">
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 01</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 02</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 03</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 04</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 05</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 06</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 07</a></div>
+                    <div class="botoes-navegacao" ><a href="", id="subtitulo">Exercício 08</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="conteudo-visual">
+            <div id="cabecalho">
+                <h1 style="text-align: center;">Entrada e saída</h1>
+            </div>
+            <div id="conteudo">
+                <p>A entrada e saída se referem à interação do programa com o usuário, seja para receber dados fornecidos pelo usuário (entrada) ou para exibir informações processadas pelo programa (saída). É importante entender esse fundamento, pois na programação você irá precisar frequentemente tratar de dados recebidos pelo usuário e imprimir eles de determinada maneira. Existem diversas formas de realizar essas tarefas, então abordaremos as principais. 
+                    <br><br><br>
+                    Na entrada de dados, existe uma função muito importante para receber dados digitados pelo usuário, a função <code><code></code>input()</code></code>. 
+                    <br><br>
+                    Vamos supor que você queira fazer um programa que dê boas-vindas ao usuário chamando-o pelo seu nome. Para realizar essa tarefa, nós poderíamos fazer assim: </p>
+                    <pre><code class="python">
+                        Nome = input("Digite seu nome: ")
+                        print("Bem-vindo/a ", Nome)
+                    </code></pre>
+                    <p>Nesse código, podemos observar dois pilares da entrada e saída de dados. O primeiro é o uso da função <code><code>input()</code></code> como valor da variável Nome. Nós poderíamos colocar o nome do usuário diretamente na variável, digitando algo como <code>Nome = “João”</code>, mas dessa maneira não seria nada prático editar o código para cada pessoa, pois cada um possui um nome diferente. 
+                        <br><br>
+                        Por isso, utilizamos a função <code><code>input()</code></code>. Ela cria um campo no console que permite o usuário digitar alguma coisa, e como essa função está dentro da variável <code>Nome</code>, o que o usuário digitar será atribuído como valor da variável. Então se o usuário digitar “Pedro”, o valor da variável <code>Nome</code> agora será “Pedro”. 
+                        <br><br>
+                        O que está entre aspas dentro dos parênteses não influencia no valor da variável, apenas o que o usuário digitar vai ser atribuído como valor. 
+                        <br><br><br>
+                        Já na função <code>print()</code>, é possível perceber que após digitar a mensagem “Bem-vindo/a”, nós deixamos um espaço extra e fechamos as aspas, e então após a virgula, nós chamamos a variável <code>Nome</code>. Com isso, quando o computador imprimir a mensagem, ele também adicionará o valor da variável <code>Nome</code> à impressão. Então, se o nome digitado foi “pedro”, ele imprimirá “Bem-vindo/a pedro”. 
+                        <br><br>
+                        Há outras formas de usar os valores de variáveis na impressão de mensagens, e exploraremos elas a seguir. 
+                        <br><br><br>
+                        Vamos supor que você quer imprimir o nome e a idade que o usuário inseriu. Você pode fazer isso utilizando a função <code><code>input()</code></code> para guardar o nome digitado em uma variável, assim como no exemplo anterior, e pode usar a função <code>int()</code> junto com a função <code><code>input()</code></code> para guardar o valor da idade digitada. 
+                        <br><br>
+                        Por padrão, todos os valores que forem digitados dentro da função <code>input()</code> terão o valor de string (veja o conteúdo sobre variáveis caso não consiga entender), mesmo que seja um número. Mas, se você utlizar a função <code>int(input())</code>, você irá converter o valor do tipo string digitado pelo usuário para um valor do tipo inteiro. Portanto, lembre-se de só utilizar essa função quando o valor recebido for um número inteiro, em caso contrário, haverá um erro. 
+                        <br><br>
+                        Voltando ao nosso exemplo, o código ficaria assim: </p>
+                        <pre><code class="python">
+                            Nome = input("Digite seu nome: ")
+                            Idade = int(input("Digite sua idade: "))
+
+                            print("Seu nome é ", Nome, " e sua idade é ", Idade)
+                        </code></pre>
+                        <p>Portanto, se o nome digitado for Pedro e a idade digitada for 13, o computador irá exibir “Seu nome é Pedro e sua idade é 13”. 
+                            <br><br></p>
+                        <h1 style="text-align: center;">Utilizando '+'</h1>
+                        <p>Também é possível fazer a impressão utilizando o operador +, ficando assim: </p>
+                        <pre><code class="python">print("eu nome é " + Nome + " e sua idade é " + Idade) </code></pre>
+                        <h1 style="text-align: center;">Utilizando a função 'format()'</h1>
+                        <p>Também é possível utilizar a função <code>format()</code>, ficando assim: </p>
+                        <pre><code class="python">print("Seu nome é {} e a sua idade é {}".format(Nome, Idade))  </code></pre>
+                        <p>É necessário utilizar os {} para definir onde o valor da variável vai ficar, e após fechar as aspas utilizar o .format() com as variáveis na ordem em que devem aparecer na impressão. </p>
+                        <h1 style="text-align: center;">Utilizando o método 'f-strings'</h1>
+                        <p>Ou utilizando o método f-strings, ficando assim: </p>
+                        <pre><code class="python">print(f"Seu nome é {Nome} e a sua idade é {Idade}") </code></pre>
+                        <p>Nesse caso, é necessário colocar toda a sua mensagem de impressão dentro do f” ”, e colocar as variáveis dentro dos {} na ordem em que devem aparecer. </p>
+                        <br><br>
+                        <p>O recebimento de valores como entrada e a formatação de saída são assuntos que juntos possuem uma grande extensão de conteúdos, por isso, eu recomendo que estude eles com calma e com muitas práticas. Comece pelo básico e aos poucos vá progredindo. Não tente decorar tudo de uma vez, muito menos entender tudo de uma vez. Se sentir necessidade, busque a informação em fontes diferentes e explicadas por pessoas diferentes, e aos poucos você sentirá evolução. 
+                            <br><br>
+                            Realize o exercício de número 6 para testar seus conhecimentos! </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
