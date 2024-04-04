@@ -69,6 +69,8 @@
             </div>
         </div>
         <div id="conteudo-visual">
+            <button id="botao-menu"></button>
+            <script src="botao.js"></script>
             <div id="cabecalho">
                 <h1 style="text-align: center;">Funções</h1>
             </div>
@@ -77,38 +79,38 @@
                     <br><br>
                     Vamos supor que você queira fazer um código que calcule a soma de dois valores. Com seus conhecimentos atuais, você provavelmente faria algo semelhante a isso: </p>
                     <pre><code class="python">
-                        Num1 = int(input("Digite um número inteiro: ")) 
-                        Num2 = int(input("Digite outro número inteiro: ")) 
+Num1 = int(input("Digite um número inteiro: ")) 
+Num2 = int(input("Digite outro número inteiro: ")) 
                         
-                        Soma = Num1 + Num2 
+Soma = Num1 + Num2 
 
-                        print(f"A soma dos números digitados é: {Soma}") 
+print(f"A soma dos números digitados é: {Soma}") 
                     </code></pre>
                     <p>E a princípio esse código é eficaz. Mas quando trabalhamos com grandes quantidades de partes do código repetidas vezes, é ineficaz reescrever elas ao longo do código, e é pra isso que existem as funções. Com elas, é possível reutilizar trechos do seu código em outras partes dele, sem precisar reescrevê-lo. 
                         <br><br></p>
                     <h1 style="text-align: center;">Estrutura de uma função</h1>
                     <p>Para definir uma função em Python, usamos a palavra-chave <code>def</code>, seguida pelo nome da função e, opcionalmente, parâmetros entre parênteses. A estrutura geral seria algo similar a: </p>
                     <pre><code class="python">
-                        def nome_da_funcao (parâmetros):
-                            #codigo aqui
+def nome_da_funcao (parâmetros):
+    #codigo aqui
                     </code></pre>
                     <h1 style="text-align: center;">Parâmetros de uma função</h1>
                     <p>Os parâmetros de uma função são utilizados quando essa função precisa receber valores de outras partes do código para tratar desses valores dentro da função. Por exemplo, utilizando o código escrito anteriormente, poderíamos fazer uma função assim: </p>
                     <pre><code class="python">
-                        def soma(a,b):
-                            return a + b
+def soma(a,b):
+    return a + b
                     </code></pre>
                     <p>Nessa função, os parâmetros são as variáveis a e b, que serão utilizados dentro da função para realizar uma operação matemática. E então, a função vai retornar a soma dos valores a e b. (return a + b) 
                         <br><br>
                         Escrevendo o código inteiro, ficaria assim: </p>
                     <pre><code class="python">
-                        def soma (a, b): 
-                            return a + b 
+def soma (a, b): 
+    return a + b 
                             
-                        Num1 = int(input("Digite um número inteiro: ")) 
-                        Num2 = int(input("Digite outro número inteiro: ")) 
+Num1 = int(input("Digite um número inteiro: ")) 
+Num2 = int(input("Digite outro número inteiro: ")) 
                         
-                        print(f"A soma dos valores é {soma(Num1, Num2)}") 
+print(f"A soma dos valores é {soma(Num1, Num2)}") 
                     </code></pre>
                     <p>Para chamar a função, nós escrevemos seu nome e dentro dos parênteses colocamos os parâmetros, se houver. Note que nós atribuímos os valores de <code>Num1</code> e <code>Num2</code> aos valores de <code>a</code> e <code>b</code>, para a função realizar os cálculos. 
                         <br><br>
