@@ -69,6 +69,8 @@
             </div>
         </div>
         <div id="conteudo-visual">
+            <button id="botao-menu"></button>
+            <script src="botao.js"></script>
             <div id="cabecalho">
                 <h1 style="text-align: center;">Laços de repetição</h1>
             </div>
@@ -77,28 +79,28 @@
                 <h1 style="text-align: center;">For</h1>
                 <p>O loop <code>for</code> é usado para iterar sobre uma sequência (como uma lista, tupla, dicionário, conjunto ou string) e executar um bloco de código para cada elemento na sequência. Por exemplo: </p>
                 <pre><code class="python">
-                    Lista = [1,2,3,4,5]
-                    for item in Lista: 
-                    print(item) 
+Lista = [1,2,3,4,5]
+for item in Lista: 
+print(item) 
                 </code></pre>
                 <p>Nesse código, o for está se referindo a cada elemento da variável (1,2,3,4,5) Lista pelo nome item, e ele irá fazer uma impressão para cada item dessa lista. O resultado da execução seria: </p>
                 <pre><code class="python">
-                    1
-                    2
-                    3
-                    4
-                    5
+1
+2
+3
+4
+5
                 </code></pre>
                 <p>OBS: O nome ‘item’ é apenas uma forma de se referir aos elementos da variável ‘Lista’. Você poderia no lugar de ‘item’ colocar qualquer outro nome, como por exemplo ‘numero’ (já que essa lista só possui números). Essa decisão fica a seu critério. 
                     <br><br><br></p>
                 <h1 style="text-align: center;">While</h1>
                 <p>O loop <code>while</code> é usado para repetir um bloco de código enquanto uma condição específica for verdadeira. Por exemplo: </p>
                 <pre><code class="python">
-                    Numero = 0 
+Numero = 0 
                     
-                    while Numero < 5: 
-                    print("Numero agora é: ", Numero) 
-                    Numero = Numero + 1 
+while Numero < 5: 
+print("Numero agora é: ", Numero) 
+Numero = Numero + 1 
                 </code></pre>
                 <p>Nesse código, enquanto a variável <code>Numero</code> for menor que cinco, ele vai mostrar o valor atual da variável e acrescentar +1 ao seu valor, e quando esse valor ultrapassar 5, o loop será encerrado. 
                     <br><br><br>
