@@ -69,6 +69,8 @@
             </div>
         </div>
         <div id="conteudo-visual">
+            <button id="botao-menu"></button>
+            <script src="botao.js"></script>
             <div id="cabecalho">
                 <h1 style="text-align: center;">Controle de fluxo</h1>
             </div>
@@ -81,12 +83,12 @@
                     <br><br>
                     Por exemplo, digamos que nós precisamos de um código para verificar se uma pessoa é maior de idade. Caso ela seja, a entrada dela está liberada, mas caso não seja, ela não poderá entrar. Nós poderíamos escrever esse código assim: </p>
                     <pre><code class="python">
-                        idade = 20
+idade = 20
 
-                        if idade >= 18:
-                            print("Entrada permitida")
-                        else:
-                            print("Entrada não permitida")
+if idade >= 18:
+    print("Entrada permitida")
+else:
+    print("Entrada não permitida")
                     </code></pre>
                     <p>Vamos analisar esse código por partes. Na linha 1, a variavel <code>idade</code> é criada seu valor é definido como 20 (caso não entenda, veja o conteúdo de Variáveis).  
                         <br><br>
@@ -100,14 +102,14 @@
                         <h1 style="text-align: center;"><code>Elif</code></h1>
                         <p>Há também um outro termo na estrutura de condições, o <code>elif</code>. Ele serve como uma segunda condição a ser verificada caso a condição do bloco <code>if</code> não seja satisfeita. Vamos supor que dessa vez estamos verificando se uma pessoa precisa ou não votar. Nosso código seria algo como: </p>
                         <pre><code class="python">
-                            idade = 20
+idade = 20
 
-                            if idade <= 15:
-                                print("Não pode votar")
-                            elif idade >= 16 and idade < 18:
-                                print("Voto opcional")
-                            else:
-                                print("Voto obrigatório")
+if idade <= 15:
+    print("Não pode votar")
+elif idade >= 16 and idade < 18:
+    print("Voto opcional")
+else:
+    print("Voto obrigatório")
                         </code></pre>
                         <p>Nesse código, se a <code>idade</code> for maior ou igual a 15, o usuário ainda não pode votar. Se for maior ou igual a 16 e menor que 18, o voto é opcional. Mas se não estiver em nenhuma dessas condições citadas, então o voto é obrigatório (estamos desconsiderando a lei que diz que pessoas com mais de 70 anos não precisam votar). 
                             <br><br>
