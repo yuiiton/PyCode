@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
     <link rel="stylesheet" href="style-1.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
@@ -14,6 +15,7 @@
             hljs.highlightAll();
         });
     </script>
+    
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -69,52 +71,53 @@
             </div>
         </div>
         <div id="conteudo-visual">
+            <button id="botao-menu"></button>
+            <script src="botao.js"></script>
             <div id="cabecalho">
-                <h1>Variáveis</h1>
+                <h1>Algoritmo</h1>
             </div>
             <div id="conteudo">
-                <p>Uma variável é um local na memória do computador que é utilizado para armazenar um valor. Esses valores podem ser números, textos, objetos, ou qualquer outro tipo de dado (trabalharemos isso no próximo tópico). As variáveis têm um nome que as identifica e permitem que o programador acesse e manipule o valor armazenado nelas durante a execução do programa.<br><br>Temos por exemplo as seguintes variáveis: </p>
+                <p>Os algoritmos desempenham um papel fundamental no mundo da computação, sendo a espinha dorsal de qualquer programa ou sistema digital. Eles são sequências de instruções precisas e lógicas projetadas para resolver um problema específico ou realizar uma tarefa computacional. Desde as operações mais simples até os complexos sistemas de inteligência artificial, os algoritmos são a base sobre a qual a computação moderna é construída. <p>
+                <p>Um algoritmo pode ser comparado a uma receita de culinária: ele descreve passo a passo como realizar uma determinada tarefa. Assim como uma receita orienta um chef na preparação de um prato delicioso, um algoritmo guia um computador na execução de uma função específica.</p>
+                <p>Os algoritmos são formulados utilizando uma linguagem de alto nível que os humanos podem entender, mas que também pode ser traduzida para linguagens de programação que os computadores podem executar. Eles podem variar em complexidade, desde simples operações matemáticas até processos intricados de tomada de decisão.</p>
+                <p>Vamos supor que nós precisamos capturar quatro notas de um estudante para calcular a média de suas notas. Com algoritmos, podemos quebrar esse problema em partes menores e tratar cada uma delas individualmente. Observe o passo a passo: </p>
+                <br>
+                <p style="font-size: larger;">1. Entrada de dados: pedimos ao usuário que insira as notas que ele deseja calcular a média, e armazenamos esses valores </p>
+                <p style="font-size: larger;">2. Criação das variáveis: criamos variáveis para armazenar os valores inseridos pelo usuário, assim como também criamos uma variável para armazenar a soma dos valores que o usuário inseriu anteriormente. </p>
+                <p style="font-size: larger;">3. Cálculo de média: após os passos anteriores, o computador irá pegar a soma dos valores armazenados e dividir pela quantidade de valores, para obter a média deles. </p>
+                <p style="font-size: larger;">4. Saída de resultados: o computador irá exibir a média calculada para o usuário. </p>
+                <br>
+                <h1 style="text-align: center;">Linguagens de programação</h1>
+                <p>Algoritmos e linguagens de programação são dois componentes interdependentes no mundo da computação. Os algoritmos, como mencionado anteriormente, são conjuntos ordenados de instruções que descrevem como resolver um problema específico. Por outro lado, as linguagens de programação fornecem as ferramentas e a sintaxe necessárias para expressar esses algoritmos de forma que os computadores possam entender e executar. </p>
+                <p>As linguagens de programação servem como um meio de tradução entre a lógica dos algoritmos e a execução real desses algoritmos em um computador. Elas oferecem uma maneira estruturada e legível para os programadores expressarem suas soluções para os problemas computacionais. </p>
+                <p>Existem muitas linguagens de programação disponíveis, cada uma com suas próprias características, sintaxe e semântica. Algumas linguagens, como C, C++, Java e Python, são amplamente utilizadas em uma variedade de aplicações devido à sua eficiência, versatilidade e suporte de comunidade. Outras linguagens, como JavaScript, são específicas para a web e são projetadas para interações com navegadores da web. </p>
+                <h1 style="text-align: center;">Python</h1>
+                <p>Python é uma linguagem de programação de alto nível, amplamente utilizada em uma variedade de domínios, desde desenvolvimento web e científico até automação de tarefas e aprendizado de máquina. Uma das razões para a popularidade do Python é sua sintaxe simples e legível, o que o torna uma excelente escolha para iniciantes em programação. </p>
+                <p>Quando se trata de algoritmos, Python oferece uma variedade de estruturas de dados e bibliotecas que facilitam a implementação e o uso de algoritmos eficientes. Algumas características gerais da linguagem Python são: </p>
+                <p style="font-size: large;">Fácil Aprendizado: Devido à sua sintaxe simples e legível, Python é relativamente fácil de aprender, mesmo para aqueles que não têm experiência prévia em programação. Isso permite que os iniciantes façam progresso rapidamente e se sintam encorajados a continuar aprendendo. </p>
+                <p style="font-size: large;">Ampla Comunidade e Recursos de Aprendizado: Python possui uma comunidade ativa e acolhedora, com uma abundância de recursos de aprendizado disponíveis, como tutoriais, documentação oficial, fóruns de discussão e cursos online. Isso facilita para os iniciantes encontrarem suporte e recursos adicionais enquanto aprendem. </p>
+                <p style="font-size: large;">Sintaxe Simples e Legível: Python possui uma sintaxe clara e legível, o que torna o código mais fácil de entender. Isso é especialmente útil para iniciantes, pois facilita a compreensão dos conceitos de programação sem se preocupar com detalhes complexos de sintaxe. </p>
+                <p style="font-size: large;">Versatilidade: Python é uma linguagem versátil que pode ser usada em uma variedade de domínios, incluindo desenvolvimento web, análise de dados, automação de tarefas, aprendizado de máquina, entre outros. Isso permite que os iniciantes explorem diferentes áreas de interesse e descubram o que mais os motiva na programação. </p>
+                <br>
+                <p>Tomando como exemplo o algoritmo de cálculo de média que havíamos escrito anteriormente, aplicando-o em Python de forma bem simples seria algo semelhante a: </p>
                 <pre><code class="python">
-                    Nome = "Maria"
-                    Idade = 25 
-                    Saldo = 320.15 
-                    Numeros_preferidos = [5,7,9,10] 
+nota1 = 7.5
+nota2 = 8.0
+nota3 = 6.5 
+nota4 = 9.0 
+                    
+soma = nota1 + nota2 + nota3 + nota4 
+media = soma / 4 
+                    
+print("A média das notas é:", media) 
                 </code></pre>
-                <p>Para criar o nome da variável, é preciso seguir algumas regras, algumas opcionais e outras obrigatórias, por exemplo: </p>
-                <p style="font-size: larger;">1. O nome da variável deve começar com uma letra (maiúscula ou minúscula). Não é permitido começar com um número ou outro caractere especial. 
-                    <br><br>
-                    2. O nome da variável pode conter apenas letras (maiúsculas ou minúsculas) e números. Outros caracteres, como espaços, pontuação ou símbolos especiais, não são permitidos. 
-                    <br><br>
-                    3. Os nomes das variáveis devem ser curtos o suficiente para serem concisos, mas também devem ser longos o suficiente para serem descritivos. Evite nomes muito curtos, como "x" ou "y", que podem não transmitir informações suficientes sobre o propósito da variável. Da mesma forma, evite nomes muito longos e verbosos que dificultem a leitura do código. 
-                    <br><br>
-                    4. Os nomes das variáveis devem ser descritivos e refletir o propósito ou conteúdo da variável. Isso torna o código mais legível e compreensível para outras pessoas que possam estar lendo ou mantendo o código. </p>
-                    <p>Nota: Eu vou quebrar a regra 3 e 4 nos próximos módulos... mas não façam o mesmo em códigos grandes TwT</p>
-                    <h1 style="text-align: center;">Tipos de dados de variáveis</h1>
-                    <p>Os tipos de dados definem os diferentes tipos de valores que podem ser armazenados em uma variável. Os tipos mais comuns são: </p>
-                    <p style="font-size: large;">Inteiro (int): Representa números inteiros, como 5, -10, 1000, etc. 
-                        <br><br>
-                        Flutuante (float): Representa números de ponto flutuante (decimais), como 3.14, -0.5, 2.718, etc. 
-                        <br><br>
-                        String (str): Representa sequências de caracteres, como "Olá, mundo!", "Python é incrível", etc. 
-                        <br><br>
-                        Booleano (bool): Representa valores lógicos verdadeiro (True) ou falso (False). 
-                        <br><br>
-                        Lista (list): Representa uma coleção ordenada de valores, que podem ser de tipos diferentes. 
-                        <br><br>
-                        Dicionário (dict): Representa uma coleção de pares chave-valor, onde cada valor é acessado por sua chave correspondente. </p>
-                        <br><br>
-                        <p>Por exemplo, a nossa variável <code>Nome</code> possui um valor do tipo String ou str, já que ela armazena uma sequência de caracteres. Lembre-se que, para a linguagem entender uma palavra ou frase como caracteres, é preciso colocar essa palavra/frase dentro de aspas ‘’ ou aspas duplas “”. 
-                            <br><br>
-                            Já a variável <code>Idade</code> armazena um valor do tipo Inteiro ou int. 
-                            <br><br>
-                            A variável <code>Saldo</code> está armazenando um valor do tipo Flutuante ou float. Perceba que para definir as casas decimais nas linguagens de programação, nós utilizamos um ponto antes de escrevê-las. 
-                            <br><br>
-                            E por fim, a variável <code>Numeros_preferidos</code> está armazenando um valor do tipo lista, já que armazena vários números em uma única variável. 
-                            <br><br><br><br>
-                             
-                            Não se preocupe caso não tenha entendido algum desses tipos de dados, você entenderá melhor eles conforme continuar praticando. Outros tipos de dados também serão apresentados futuramente. 
-                            <br><br>
-                            Para ampliar seus conhecimentos, realize o exercício de número 2 na nossa aba de exercícios! </p>
+                <p>Analisando esse código por partes: </p>
+                <p style="font-size: large;">Nas linhas 1 – 4, temos uma sequência de variáveis nomeadas como nota1, nota2, nota3, nota4. Cada uma está armazenando um valor numérico referente a uma nota escolar. Note que para fazer a atribuição de um valor a uma variável, precisamos utilizar o símbolo “=” após o nome da variável, e em seguida digitar o valor que essa variável receberá. </p>
+                <p style="font-size: large;">Na linha 6 e 7, temos duas novas variáveis sendo criadas, uma nomeada “soma”, e outra nomeada “media”. Observe que, diferente das variáveis anteriores, essas duas estão armazenando equações matemáticas. A variável <code>soma</code> está armazenando a soma dos valores das variáveis nota1, nota2, nota3 e nota4. Já a variável <code>media</code> está pegando o valor da variável <code>soma</code> e dividindo por quatro, que é a quantidade de notas que possuímos. (OBS: lembre-se que para calcular a média de uma sequência de números, nós precisamos somar todos os números e dividir pela quantidade de números que temos, e é isso que o código está fazendo.) </p>
+                <p style="font-size: large;">Por fim, na linha 9, o código chama a função <code>print()</code>. Essa função em Python é utilizada para imprimir valores na tela do usuário, mostrando tudo o que está dentro dos parênteses. No caso do nosso código, o usuário receberá como resultado a mensagem: <code>A média das notas é: 7.75</code> </p>
+                <br>
+                <p>Nos próximos módulos, abordaremos com mais profundidade as especificações da linguagem Python, bem como seus fundamentos básicos.  </p>
+                <p>Para reforçar seu estudo de algoritmos, tente realizar o exercício 1 na nossa página de exercícios! </p>
             </div>
         </div>
     </div>
