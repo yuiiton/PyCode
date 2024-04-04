@@ -69,6 +69,8 @@
             </div>
         </div>
         <div id="conteudo-visual">
+            <button id="botao-menu"></button>
+            <script src="botao.js"></script>
             <div id="cabecalho">
                 <h1 style="text-align: center;">Operadores lógicos</h1>
             </div>
@@ -80,29 +82,29 @@
                     <br><br>
                     Em Python, o operador lógico utilizado na situação em que duas condições precisam ser verdadeiras, é o <code>and</code>. Observe no exemplo a seguir: </p>
                     <pre><code class="python">
-                        X = 10
-                        Y = 20
+X = 10
+Y = 20
 
-                        print(X > 7 and Y > 21)
+print(X > 7 and Y > 21)
                     </code></pre>
                     <p>Se executarmos esse código, o computador irá imprimir a mensagem “False”, pois a nossa condição é falsa já que X é maior que sete, mas Y não é maior que 21. 
                         <br><br></p>
                     <h1 style="text-align: center;"><code>Or</code></h1>
                     <p>Outro operador lógico é o  <code class="python">or</code>. Com ele, o código pode ser executado se uma das condições estabelecidas forem verdadeiras. Vamos reescrever o nosso código anterior, mas dessa vez utilizando o operador <code>or</code>: </p>
                     <pre><code class="python">
-                        X = 10
-                        Y = 20
+X = 10
+Y = 20
 
-                        print(X > 7 or Y > 21)
+print(X > 7 or Y > 21)
                     </code></pre>
                     <p>Nesse exemplo, o computador irá imprimir a mensagem “True”, pois apesar de Y não ser maior que 21, X é maior que sete, e com o operador or, basta apenas uma das condições serem verdadeiras para ele ser executado. 
                         <br><br></p>
                     <h1 style="text-align: center;"><code>Not</code></h1>
                     <p>Temos também o operador <code>not</code>, que como o próprio nome indica, ele irá verificar se a condição não é verdadeira. Tomando como exemplo o nosso código anterior: </p>
                     <pre><code class="python">
-                        X = 10
+X = 10
 
-                        print(not X > 12)
+print(not X > 12)
                     </code></pre> 
                     <p>Nesse caso, o computador irá imprimir a mensagem “True”, porque ele está verificando se X não é maior que 12, o que é verdadeiro já que X é igual a 10. </p>
                     <br><br>
@@ -110,29 +112,29 @@
                     <p>Os operadores de comparação são comumente utilizados pra verificações de condições na estrutura de fluxo condicional (conteúdo que será trabalhado mais a frente). A seguir estão os principais: </p>
                     <p style="font-size: large;">1. ‘==’: Ele verifica se um valor é igual a outro, por exemplo: </p>
                     <pre><code class="python">
-                        X = 10
-                        Y = 10
+X = 10
+Y = 10
 
-                        print(X == Y)
+print(X == Y)
                     </code></pre>
                     <p>O computador vai retornar o valor “True”, já que ambas as variáveis possuem o mesmo valor. </p>
                     <br><br>
                     <p style="font-size: large;">2. ‘>=’ e ‘<=’: Eles verificam se um valor é igual ou maior que o outro, e igual ou menor que o outro, respectivamente. Por exemplo: </p>
                     <pre><code class="python">
-                        X = 10
-                        Y = 20
+X = 10
+Y = 20
 
-                        print(X >= Y)
-                        print(X <= Y)
+print(X >= Y)
+print(X <= Y)
                     </code></pre>
                     <p>O computador irá retornar “False” e “True”, respectivamente, pois na primeira análise o X não é maior ou igual a Y, mas na segunda análise o X é menor que Y. </p>
                     <br><br>
                     <p style="font-size: large;">3. ‘!=’: Ele verifica se um valor é diferente do outro. Por exemplo: </p>
                     <pre><code class="python">
-                        X = 10
-                        Y = 10
+X = 10
+Y = 10
 
-                        print(X != Y)
+print(X != Y)
                     </code></pre>
                     <p>O computador vai retornar “False”, pois X possui o mesmo valor que Y, logo eles não são diferentes. </p>
                     <br><br>
